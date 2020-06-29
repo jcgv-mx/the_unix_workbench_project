@@ -5,6 +5,8 @@
 # Purpose:
 # Ask a user for a guess on the number of files in current directory.
 
+# USAGE: .\guessinggame.sh
+
 function get_number_of_files {
     local n=$(ls -l | grep "^-" | wc -l)
     echo $n
@@ -34,5 +36,8 @@ function guessing_game {
     done
 }
 
-source ./guessinggame.sh
+
+
+# We execute the main function.
+
 guessing_game
